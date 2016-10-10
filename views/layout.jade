@@ -1,0 +1,19 @@
+include mixins/librerias.jade
+include mixins/varios.jade
+doctype html
+html
+  head
+    title Creador de avatares
+    +bootstrap
+    +adminltecss
+    +fontawesome
+    block css
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body.hold-transition.skin-blue.layout-top-nav
+    include includes/mainnav.jade
+    .container#contenedor
+      block content
+    +jquery
+    +bootstrapjs
+    +adminltejs
+    block js

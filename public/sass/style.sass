@@ -1,0 +1,26 @@
+$cabezaClass: cabeza
+$cabezaWidth: 150
+$cabezaHeight: 131
+$cabezaEspacio: 5
+$cabezaFilas: 1
+$cabezaColumnas: 6
+
+@mixin generadorSprite( $nombreClase, $ancho, $alto, $separador, $filas, $columnas, $urlImagen )
+  .#{$nombreClase}
+    background-image: url( #{$urlImagen} )
+    width: #{$ancho}px
+    height: #{$alto}px
+  @for $i from 1 through $filas
+    @for $j from 1 through $columnas
+      $num: (( $i - 1 ) * $columnas) + $j
+      .#{$nombreClase}.#{$nombreClase}-#{$num}
+        $posY: ( ( $alto + $separador ) * ( $i - 1)) * -1
+        $posX: (( $ancho + $separador ) * ( $j - 1)) * -1
+        background-position: #{$posX}px #{$posY}px
+
+@include generadorSprite( 'cabeza', 150, 131, 5, 1, 6, '/images/cabeza_lineas.png')
+@include generadorSprite( 'ojos', 102, 95, 0, 2, 6, '/images/eyes.png')
+@include generadorSprite( 'nariz', 43, 40, 0, 2, 6, '/images/noses.png')
+@include generadorSprite( 'boca', 54, 50, 0, 2, 6, '/images/mouths.png')
+@include generadorSprite( 'pelo', 193, 170, 0, 3, 7, '/images/hair_line.png')
+@include generadorSprite( 'cuerpo', 126, 117, 0, 4, 6, '/images/shirts2.png')

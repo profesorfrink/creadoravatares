@@ -1,0 +1,292 @@
+.cabeza {
+  background-image: url(/images/cabeza_lineas.png);
+  width: 150px;
+  height: 131px; }
+
+.cabeza.cabeza-1 {
+  background-position: 0px 0px; }
+
+.cabeza.cabeza-2 {
+  background-position: -155px 0px; }
+
+.cabeza.cabeza-3 {
+  background-position: -310px 0px; }
+
+.cabeza.cabeza-4 {
+  background-position: -465px 0px; }
+
+.cabeza.cabeza-5 {
+  background-position: -620px 0px; }
+
+.cabeza.cabeza-6 {
+  background-position: -775px 0px; }
+
+.ojos {
+  background-image: url(/images/eyes.png);
+  width: 102px;
+  height: 95px; }
+
+.ojos.ojos-1 {
+  background-position: 0px 0px; }
+
+.ojos.ojos-2 {
+  background-position: -102px 0px; }
+
+.ojos.ojos-3 {
+  background-position: -204px 0px; }
+
+.ojos.ojos-4 {
+  background-position: -306px 0px; }
+
+.ojos.ojos-5 {
+  background-position: -408px 0px; }
+
+.ojos.ojos-6 {
+  background-position: -510px 0px; }
+
+.ojos.ojos-7 {
+  background-position: 0px -95px; }
+
+.ojos.ojos-8 {
+  background-position: -102px -95px; }
+
+.ojos.ojos-9 {
+  background-position: -204px -95px; }
+
+.ojos.ojos-10 {
+  background-position: -306px -95px; }
+
+.ojos.ojos-11 {
+  background-position: -408px -95px; }
+
+.ojos.ojos-12 {
+  background-position: -510px -95px; }
+
+.nariz {
+  background-image: url(/images/noses.png);
+  width: 43px;
+  height: 40px; }
+
+.nariz.nariz-1 {
+  background-position: 0px 0px; }
+
+.nariz.nariz-2 {
+  background-position: -43px 0px; }
+
+.nariz.nariz-3 {
+  background-position: -86px 0px; }
+
+.nariz.nariz-4 {
+  background-position: -129px 0px; }
+
+.nariz.nariz-5 {
+  background-position: -172px 0px; }
+
+.nariz.nariz-6 {
+  background-position: -215px 0px; }
+
+.nariz.nariz-7 {
+  background-position: 0px -40px; }
+
+.nariz.nariz-8 {
+  background-position: -43px -40px; }
+
+.nariz.nariz-9 {
+  background-position: -86px -40px; }
+
+.nariz.nariz-10 {
+  background-position: -129px -40px; }
+
+.nariz.nariz-11 {
+  background-position: -172px -40px; }
+
+.nariz.nariz-12 {
+  background-position: -215px -40px; }
+
+.boca {
+  background-image: url(/images/mouths.png);
+  width: 54px;
+  height: 50px; }
+
+.boca.boca-1 {
+  background-position: 0px 0px; }
+
+.boca.boca-2 {
+  background-position: -54px 0px; }
+
+.boca.boca-3 {
+  background-position: -108px 0px; }
+
+.boca.boca-4 {
+  background-position: -162px 0px; }
+
+.boca.boca-5 {
+  background-position: -216px 0px; }
+
+.boca.boca-6 {
+  background-position: -270px 0px; }
+
+.boca.boca-7 {
+  background-position: 0px -50px; }
+
+.boca.boca-8 {
+  background-position: -54px -50px; }
+
+.boca.boca-9 {
+  background-position: -108px -50px; }
+
+.boca.boca-10 {
+  background-position: -162px -50px; }
+
+.boca.boca-11 {
+  background-position: -216px -50px; }
+
+.boca.boca-12 {
+  background-position: -270px -50px; }
+
+.pelo {
+  background-image: url(/images/hair_line.png);
+  width: 193px;
+  height: 170px; }
+
+.pelo.pelo-1 {
+  background-position: 0px 0px; }
+
+.pelo.pelo-2 {
+  background-position: -193px 0px; }
+
+.pelo.pelo-3 {
+  background-position: -386px 0px; }
+
+.pelo.pelo-4 {
+  background-position: -579px 0px; }
+
+.pelo.pelo-5 {
+  background-position: -772px 0px; }
+
+.pelo.pelo-6 {
+  background-position: -965px 0px; }
+
+.pelo.pelo-7 {
+  background-position: -1158px 0px; }
+
+.pelo.pelo-8 {
+  background-position: 0px -170px; }
+
+.pelo.pelo-9 {
+  background-position: -193px -170px; }
+
+.pelo.pelo-10 {
+  background-position: -386px -170px; }
+
+.pelo.pelo-11 {
+  background-position: -579px -170px; }
+
+.pelo.pelo-12 {
+  background-position: -772px -170px; }
+
+.pelo.pelo-13 {
+  background-position: -965px -170px; }
+
+.pelo.pelo-14 {
+  background-position: -1158px -170px; }
+
+.pelo.pelo-15 {
+  background-position: 0px -340px; }
+
+.pelo.pelo-16 {
+  background-position: -193px -340px; }
+
+.pelo.pelo-17 {
+  background-position: -386px -340px; }
+
+.pelo.pelo-18 {
+  background-position: -579px -340px; }
+
+.pelo.pelo-19 {
+  background-position: -772px -340px; }
+
+.pelo.pelo-20 {
+  background-position: -965px -340px; }
+
+.pelo.pelo-21 {
+  background-position: -1158px -340px; }
+
+.cuerpo {
+  background-image: url(/images/shirts2.png);
+  width: 126px;
+  height: 117px; }
+
+.cuerpo.cuerpo-1 {
+  background-position: 0px 0px; }
+
+.cuerpo.cuerpo-2 {
+  background-position: -126px 0px; }
+
+.cuerpo.cuerpo-3 {
+  background-position: -252px 0px; }
+
+.cuerpo.cuerpo-4 {
+  background-position: -378px 0px; }
+
+.cuerpo.cuerpo-5 {
+  background-position: -504px 0px; }
+
+.cuerpo.cuerpo-6 {
+  background-position: -630px 0px; }
+
+.cuerpo.cuerpo-7 {
+  background-position: 0px -117px; }
+
+.cuerpo.cuerpo-8 {
+  background-position: -126px -117px; }
+
+.cuerpo.cuerpo-9 {
+  background-position: -252px -117px; }
+
+.cuerpo.cuerpo-10 {
+  background-position: -378px -117px; }
+
+.cuerpo.cuerpo-11 {
+  background-position: -504px -117px; }
+
+.cuerpo.cuerpo-12 {
+  background-position: -630px -117px; }
+
+.cuerpo.cuerpo-13 {
+  background-position: 0px -234px; }
+
+.cuerpo.cuerpo-14 {
+  background-position: -126px -234px; }
+
+.cuerpo.cuerpo-15 {
+  background-position: -252px -234px; }
+
+.cuerpo.cuerpo-16 {
+  background-position: -378px -234px; }
+
+.cuerpo.cuerpo-17 {
+  background-position: -504px -234px; }
+
+.cuerpo.cuerpo-18 {
+  background-position: -630px -234px; }
+
+.cuerpo.cuerpo-19 {
+  background-position: 0px -351px; }
+
+.cuerpo.cuerpo-20 {
+  background-position: -126px -351px; }
+
+.cuerpo.cuerpo-21 {
+  background-position: -252px -351px; }
+
+.cuerpo.cuerpo-22 {
+  background-position: -378px -351px; }
+
+.cuerpo.cuerpo-23 {
+  background-position: -504px -351px; }
+
+.cuerpo.cuerpo-24 {
+  background-position: -630px -351px; }
+
+/*# sourceMappingURL=style.css.map */

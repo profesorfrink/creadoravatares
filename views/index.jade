@@ -1,0 +1,125 @@
+extends layout
+
+block content
+  .col-xs-12.col-sm-4
+    .text-center.center-block
+      .button-group
+        button.btn.btn-success.js-aleatorio Generar aleatorio
+        button.btn.btn-primary.js-cuadro-prop Mostrar cuadro de propiedades
+        button.btn.btn-info.js-guardar Guardar imagen
+    canvas#avatar_canvas(height="220" width="180").hidden Su navegador no soporta canvas
+    canvas#canvas_fabric(height="220" width="180") Su navegador no soporta canvas
+    
+  .col-xs-12.col-sm-8
+    #contenedorTablaObjetos(style="border: 1px solid #CCC;")
+    ul#lista-opciones.nav.nav-tabs
+      li.active: a(href="#tab-cabeza", data-toggle="tab" ) Cabeza
+      li: a(href="#tab-cara", data-toggle="tab" ) Cara
+      li: a(href="#tab-pelo", data-toggle="tab" ) Pelo
+      li: a(href="#tab-cuerpo", data-toggle="tab" ) Cuerpo
+    div.tab-content
+      div.tab-pane.fade.in.active#tab-cabeza(data-nombre="cara")
+        h3.text-center Forma
+        +contenidoTab ('cabeza', 1, 6 )
+        input(type="color", value="#ffffcc")#colorCara
+
+      div.tab-pane.fade#tab-cara
+        ul.nav.nav-tabs#tabs-cara
+          li.active: a(href="#tab-ojos", data-toggle="tab" ) Ojos
+          li: a(href="#tab-nariz", data-toggle="tab" ) Nariz
+          li: a(href="#tab-boca", data-toggle="tab" ) Boca
+        div.tab-content
+          div.tab-pane.active#tab-ojos(data-nombre="ojos")
+            +contenidoTab ('ojos', 2, 6 )
+          div.tab-pane#tab-nariz(data-nombre="nariz")
+            +contenidoTab ('nariz', 2, 6 )
+          div.tab-pane#tab-boca(data-nombre="boca")
+            +contenidoTab ('boca', 2, 6 )
+      div.tab-pane.fade#tab-pelo(data-nombre="pelo")
+        +contenidoTab ('pelo', 3, 7 )
+        input(type="color", value="#000")#colorPelo
+      div.tab-pane.fade#tab-cuerpo(data-nombre="cuerpo")
+        +contenidoTab ('cuerpo', 4, 6 )
+
+block js
+  +jqueryui
+  +lodash
+  +fabricjs
+  +handlebars
+  script(type="x-handlebars")#tplListaObjetos.
+        <table class="table table-stripped" style="background-color: #EEE; border: 1px solid #000;">
+            <thead>
+                <tr>
+                    <th class="col-sm-2">Tipo</th>
+                    <th class="col-sm-3">Valor</th>
+                    <th class="col-sm-2">Opacidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each objetos}}
+                    <tr style="background-color: #FFF; border-top: 1px solid black;">
+                    
+                    {{#if _originalElement.src }}
+                            <td><span class="tiempo-subtitulo label label-primary">{{getNombre this }}</span></td>
+                            <td><img src="{{_originalElement.src}}" style="width: 32px; max-width: 32px;"></td>
+                            <td>
+                                <input type="number" class="js-cambiar-opacidad" min="0" max="1" value="1" data-index="{{@index}}" data-idx="{{@index}}" step="0.05" />
+                            </td>
+                            <tr>
+                              <td colspan="3">
+                                  <div class="btn-group">
+                                      <button class="btn btn-primary btn-xs js-seleccionar-objeto" data-index="{{@index}}" title="Seleccionar"><i class="glyphicon glyphicon-ok"></i></button>
+                                      
+                                      <button class="btn btn-info btn-xs js-flip-x" data-index="{{@index}}" title="Flip horizontal"><i class="glyphicon glyphicon-menu-right"></i></button>
+                                      <button class="btn btn-warning btn-xs js-flip-y" data-index="{{@index}}" title="Flip Vertical"><i class="glyphicon glyphicon-menu-up"></i></button>
+                                      <button class="btn btn-primary btn-xs js-clone" data-index="{{@index}}" title="Clonar"><i class="fa fa-clone"></i></button>
+                                      <button class="btn btn-danger btn-xs  js-eliminar-objeto" data-index="{{@index}}" data-idx="{{@index}}" title="Seleccionar"><i class="glyphicon glyphicon-remove"></i></button>                         
+                                  </div>
+                                  
+                              </td>
+                            </tr>
+                            
+                    {{/if}}
+                    </tr>   
+                {{/each}}
+            </tbody>
+        </table>
+  script(type="x-handlebars")#tplTabsObjetos.
+    <ul class="nav nav-tabs"  style="background-color: #EEE;">
+      {{#each objetos}}
+        <li class="{{isActive @index }}">
+          <a href="#tab2-{{getNombre this }}" data-toggle="tab">{{getNombre this }}</a>
+        </li>
+      {{/each}}
+    </ul>
+    <div class="tab-content" style="background-color: #EEE;">
+      {{#each objetos}}
+        <div class="tab-pane {{isActive @index }}" id="tab2-{{getNombre this }}" style="background-color: #EEE;">
+          <div class="col-xs-6" style="background-color: #FCFCFC; height: 160px;">
+            <img src="{{_originalElement.src}}" >
+          </div>
+          <div class="col-xs-6" style="background-color: #FCFCFC; height: 160px;">
+            <span class="label label-info">Mover</span>
+            <div class="btn-group">
+              <button class="btn btn-primary btn-xs js-mover-arriba" data-index="{{@index}}"><i class="fa fa-arrow-circle-up" /></button>
+              <button class="btn btn-primary btn-xs js-mover-abajo" data-index="{{@index}}"><i class="fa fa-arrow-circle-down" /></button>
+              <button class="btn btn-primary btn-xs js-mover-izquierda" data-index="{{@index}}"><i class="fa fa-arrow-circle-left" /></button>
+              <button class="btn btn-primary btn-xs js-mover-derecha" data-index="{{@index}}"><i class="fa fa-arrow-circle-right" /></button>
+            </div>
+            
+          </div>
+          <div class="col-xs-12" style="background-color: #FCFCFC;">
+            <div class="btn-group">
+              <button class="btn btn-primary btn-xs js-seleccionar-objeto" data-index="{{@index}}" title="Seleccionar"><i class="glyphicon glyphicon-ok"></i></button>
+              <button class="btn btn-info btn-xs js-flip-x" data-index="{{@index}}" title="Flip horizontal"><i class="glyphicon glyphicon-menu-right"></i></button>
+              <button class="btn btn-warning btn-xs js-flip-y" data-index="{{@index}}" title="Flip Vertical"><i class="glyphicon glyphicon-menu-up"></i></button>
+              <button class="btn btn-primary btn-xs js-clone" data-index="{{@index}}" title="Clonar"><i class="fa fa-clone"></i></button>
+              <button class="btn btn-danger btn-xs  js-eliminar-objeto" data-index="{{@index}}" data-idx="{{@index}}" title="Seleccionar"><i class="glyphicon glyphicon-remove"></i></button>                         
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+
+  script(src="/javascripts/datos.js")
+  script(src="/javascripts/index.js")

@@ -1,0 +1,237 @@
+#avatar_wrapper {
+    width: 470px;
+    height: 280px;
+	margin: auto;
+	border: 4px solid black;
+    position: absolute;
+    right: 50px;
+    top: 130px;
+    z-index: 2;
+    display: none;
+}
+
+#mobile_avatar_wrapper {
+    width: 470px;
+    height: 280px;
+	margin: auto;
+	border: 4px solid black;
+    text-shadow: none;
+}
+
+#avatar_editor {
+	width: 100%;
+    font-size: 1.2em;
+	background: #78A1C4;
+	position: relative;
+	overflow: hidden;
+}
+
+.left {
+	clear: both;
+	float: left;
+	width: 158px;
+	margin: 0; padding: 0;
+	background: white;
+	border-top: 2px solid black;
+	border-right: 2px solid black;
+    height: 225px;
+}
+
+.right {
+	float: right;
+	width: 310px;
+    height: 225px;
+	margin: 0; padding: 0;
+}
+
+#avatar_editor h2 {
+	background: #78A1C4;
+	height: 31px;
+	padding: 6px 0 0 20px;
+	margin: 0;
+	float: left;	
+}
+
+#avatar_editor .topNav:link, #avatar_editor .topNav:visited {
+	text-decoration: none;
+	color: black;
+	font-size: 1em;
+	background: #5D85A8;
+	display:block;
+	float: right;
+	padding: 2px 10px 4px;
+}
+
+#avatar_editor .topNav:hover, #avatar_editor .topNav:active {
+	color: black;
+	background: #B5D1EB;
+}
+
+#avatar_editor #random {
+    -moz-border-radius-bottomleft: 16px;
+	border-bottom-left-radius: 16px;
+	padding-left: 15px;
+}
+
+#menu_nav ul, #sub_nav ul {
+	list-style-type:none;
+	padding: 0;
+	margin: 0;
+}
+
+#menu_nav li, #sub_nav li {
+	float: left;
+	position: relative;
+}
+
+#menu_nav a:link, #menu_nav a:visited, #sub_nav a:link, #sub_nav a:visited {
+	display: block;
+	width: 77px;
+	text-align:center;
+	padding: 2px 0;
+	margin: 0;
+
+	font-size: 1.1em;
+	text-decoration: none;
+	color: black;
+	background: #78A1C4;
+}
+
+#sub_nav a:link, #sub_nav a:visited {
+	background: #B5D1EB;
+	font-size: 1em;
+}
+
+#menu_nav a.selected, #menu_nav a:hover, #menu_nav a:active {
+	background: #B5D1EB;
+}
+
+#sub_nav a.selected, #sub_nav a:hover, #sub_nav a:active {
+	background: #D5E7F7;
+}
+
+.menu_content {
+	clear: both;
+	height: 100%;
+	display: none;
+	background: #B5D1EB;
+	padding-top: 1px;
+}
+
+.menu_content h3 {
+	padding: 2px 5px 0;
+	margin: 0;
+	font-size: 1em;
+	font-weight: normal;
+	position: relative;
+	clear: both;
+}
+
+.sub_content {
+	clear: both;
+	display: none;
+	background: #D5E7F7;
+	height: 130px;
+    position: relative;
+    padding: 25px 0 0 7px;
+}
+
+.menu_content div.section {
+	padding: 0;
+	margin: 5px 15px;
+	position: relative;
+    clear: both;
+}
+
+#content1 div { height: 30%; padding-top: 20px;}
+#content2 { padding: 10px; }
+#content4 { padding-top: 10px; }
+
+
+.sub_content a:link, .sub_content a:visited,
+.menu_content .section a:link, .menu_content .section a:visited {
+	display: block;
+	position: relative;
+	width: 40px;
+	height: 36px;
+	/*outline: black solid 1px;*/
+	border: 1px solid;
+    border-color: transparent;
+	float: left;
+	margin-right: 4px;
+	margin-bottom: 5px;
+}
+
+
+.sub_content a:hover, .sub_content a:active,
+.menu_content .section a:hover, .menu_content .section a:active {
+	/*outline: white solid 2px;*/
+	border: 2px solid white;
+	margin: -1px 3px 3px -1px;
+}
+
+.menu_content .color a {
+    -moz-border-radius: 100px;
+	border-radius: 100px;
+}
+
+#content3 .section a:link, #content3 .section a:visited {
+	width: 34px;
+	height: 30px;
+    margin-bottom: 4px;
+}
+
+#content3 .section a:hover, #content3 .section a:active {
+    margin-bottom: 1px;
+}
+
+
+#content3 .color a:link, #content3 .color a:visited {
+	width: 30px;
+	margin-right: 3px;
+}
+
+#content3 .color a:hover, #content3 .color a:active {
+	margin-right: 2px;
+}
+
+.menu_content img, .sub_content img {
+    position: absolute;
+    width: 275px;
+    left: -2px;
+}
+
+.sub_content img {
+    top: 22px;
+    left: 5px;
+}
+
+#save_message {
+	background: black;
+	opacity:0.8;
+ 	filter:alpha(opacity=80); /* For IE8 and earlier */
+ 	margin: auto;
+ 	height: 100%;
+ 	width: 100%;
+ 	position: absolute;
+ 	text-align: center;
+ 	color: white;
+ 	font-size: 2em;
+ 	padding-top: 2em;
+ 	display: none;
+}
+
+#notice {
+	font-size: 0.9em;
+	text-align: center;
+    background: black;
+    color: white;
+    clear: both;
+    padding: 3px;
+    margin: 0;
+}
+
+#avatar_canvas {
+    position: relative;
+    left: -10px;
+}

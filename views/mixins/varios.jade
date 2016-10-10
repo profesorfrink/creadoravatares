@@ -1,0 +1,39 @@
+mixin initAdmin
+  script.
+    var AdminLTEOptions = {
+        //Enable sidebar expand on hover effect for sidebar mini
+        //This option is forced to true if both the fixed layout and sidebar mini
+        //are used together
+        sidebarExpandOnHover: true,
+        //BoxRefresh Plugin
+        enableBoxRefresh: true,
+        //Bootstrap.js tooltip
+        enableBSToppltip: true
+    };
+
+mixin listaNotificaciones( notificaciones )
+  //-var totalItems = notificaciones.length;
+  li.dropdown.messages-menu
+    a.dropdown-toggle(href="#", data-toggle="dropdown")
+      i.fa.fa-envelope-o
+      span.label.label-success #{notificaciones.length}
+    ul.dropdown-menu
+      li.header Hay #{notificaciones.length} notificaciones
+      li
+        div
+          ul.menu(style="overflow: hidden; width: 100%; height: 200px;")
+            each notificacion in notificaciones
+              li
+                a(href="#")
+                  .pull-left
+                    img.img-circle(src="#{notificacion.imagen}")
+                  h4 #{notificacion.titulo} <small><i class="fa fa-clock-o"></i> #{notificacion.fecha}</small>
+                  p #{notificacion.descripcion}
+      li.footer
+        a(href="#") Ver todas las notificaciones
+
+mixin contenidoTab( nombreClase, filas, columnas)
+  - var total = filas * columnas;
+  - var n = 0;
+  while n < total
+    img(src="/images/transparent.gif", class="#{nombreClase} #{nombreClase}-#{++n} js-item-imagen", data-num="#{n}", data-item-rows="#{filas}", data-item-cols="#{columnas}", data-nombre="#{nombreClase}")
